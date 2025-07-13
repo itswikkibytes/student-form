@@ -12,4 +12,5 @@ A responsive Student Registration Web App built using HTML, JavaScript, and Tail
 
 ✅ Dark-themed layout for better readability
 
-📷 Preview
+📷 Preview the webpage here
+https://itswikkibytes.github.io/student-form/
