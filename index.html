@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form with Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white p-6">
+
+    <div class="max-w-3xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 text-center text-blue-400">Student Registration Form</h2>
+
+        <form id="studentForm" class="space-y-5">
+            <div>
+                <label class="block font-semibold">Full Name</label>
+                <input type="text" id="name" required placeholder="Enter your Name"
+                    class="w-full p-2 mt-2 border border-gray-600 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+
+            <div>
+                <label class="block font-semibold">Age</label>
+                <input type="number" id="age" required placeholder="Enter your Age" min="15" max="40"
+                    class="w-full p-2 mt-2 border border-gray-600 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+
+            <div>
+                <label class="block font-semibold">Gender</label>
+                <div class="flex gap-6 mt-2 text-gray-200">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                    <label><input type="radio" name="gender" value="Other"> Other</label>
+                </div>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Course</label>
+                <select id="course" required
+                    class="w-full p-2 mt-2 border border-gray-600 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    <option value="">-- Select Course --</option>
+                    <option value="C++ language">C++ language</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Cloud Computing">Cloud Computing</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block font-semibold">Email</label>
+                <input type="email" id="email" required
+                    class="w-full p-2 mt-2 border border-gray-600 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded transition duration-200">
+                Submit
+            </button>
+        </form>
+    </div>
+
+    <!-- Table to show the database -->
+    <div class="max-w-4xl mx-auto mt-10 bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-bold mb-4 text-blue-300">Student Database</h3>
+        <table class="w-full text-center border-collapse">
+            <thead class="bg-blue-700 text-white">
+                <tr>
+                    <th class="border px-4 py-2">Name</th>
+                    <th class="border px-4 py-2">Age</th>
+                    <th class="border px-4 py-2">Gender</th>
+                    <th class="border px-4 py-2">Course</th>
+                    <th class="border px-4 py-2">Email</th>
+                    <th class="border px-4 py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody" class="bg-gray-700 text-white">
+                <!-- Rows will be added here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
